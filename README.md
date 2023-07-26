@@ -17,27 +17,32 @@ If you prefer to watch a video rather than walk through these step-by-step instr
 -   Right-click the  _BusinessObjects_  folder located in the  [module project](https://docs.devexpress.com/eXpressAppFramework/118045/application-shell-and-base-infrastructure/application-solution-components/application-solution-structure). Choose  **Add**  |  **New Item**. In the invoked  **Add New Item**  dialog, choose the  **DevExpress ORM Data Model Wizard**  template located in the  **DevExpress**  category. Set the new item’s name to  **MySolutionDataModel.xpo**  and click  **Add**. You will see that the  _MySolutionDataModel.xpo_  item is added and the wizard dialog is invoked.
 -   In the invoked wizard dialog, choose  **Map to an existing database**  and click  **Next**.
     
-    ![XpoDesigner_LegacyDB_Wizard1](https://docs.devexpress.com/eXpressAppFramework/images/xpodesigner_legacydb_wizard1117140.png)
+    ![image](https://github.com/jjcolumb/Generate-XPO-Business-Classes-for-Existing-Data-Tables/assets/126447472/2ff59958-9775-46c7-a1ee-7f9f27be5902)
+
     
 -   Specify connection settings to the database containing the target data. Multiple database systems (Microsoft SQL Server, DB2, MySql, Firebird, etc) are supported by the wizard. Use the  **Provider**  combo box to select the required database type. Note that the corresponding database provider assembly must be registered in the Global Assembly Cache (GAC) on your machine or the wizard will fail. In this example, we will use the “Northwind Traders” demo database. This database is shipped with DXperience and installed in  _%PUBLIC%\Documents\DevExpress Demos  23.1  \Components\Data\nwind.mdb_, by default.
     
-    ![XpoDesigner_LegacyDB_Wizard2](https://docs.devexpress.com/eXpressAppFramework/images/xpodesigner_legacydb_wizard2117141.png)
+    ![image](https://github.com/jjcolumb/Generate-XPO-Business-Classes-for-Existing-Data-Tables/assets/126447472/441bcb7a-1ceb-4e31-8a6b-e3c734d48c78)
+
     
     Click  **Next**  after connection settings have been specified.
     
 -   In the next step, the wizard displays a list of tables that can be mapped to persistent classes. Select a table(s) to be mapped to a persistent object(s) and for each table select columns that will be mapped to the persistent object’s properties. For unchecked columns, persistent properties will not be generated. For instance, select the  **Customers**  and  **Orders**  tables.
     
-    ![XpoDesigner_LegacyDB_Wizard3](https://docs.devexpress.com/eXpressAppFramework/images/xpodesigner_legacydb_wizard3117142.png)
+    ![image](https://github.com/jjcolumb/Generate-XPO-Business-Classes-for-Existing-Data-Tables/assets/126447472/8b2266ac-da6d-4a0f-b941-7adb4dba251e)
+
     
 -   Click  **Next**  to close the wizard. The generated data model will be shown in the  **XPO Data Model**  designer.
     
-    ![XpoDesigner_LegacyDB_Designer](https://docs.devexpress.com/eXpressAppFramework/images/xpodesigner_legacydb_designer117143.png)
+    ![image](https://github.com/jjcolumb/Generate-XPO-Business-Classes-for-Existing-Data-Tables/assets/126447472/72d3c6fb-5a53-421b-ab9c-2249d707dcd5)
+
     
     If you want to customize the generated data model, refer to the  [How to: Create a Business Model in the XPO Data Model Designer](https://docs.devexpress.com/eXpressAppFramework/113450/business-model-design-orm/business-model-design-with-xpo/create-a-business-model-in-the-xpo-data-model-designer)  topic. The names of persistent classes and their properties match the names of selected tables and their columns. In the current sample, the table names are in plural form. So, you may want to change class names (**Customers**  to  **Customer**  and  **Orders**  to  **Order**). To rename a class or its property, select it in the designer and change the  **Name**  in the  **Properties**  window. The classes and properties with modified names will still be mapped to corresponding tables and columns, as the  [PersistentAttribute](https://docs.devexpress.com/XPO/DevExpress.Xpo.PersistentAttribute)  is automatically added to the designer-generated code.
     
 -   In the  **Visual Studio**  toolbar, click save. The generated code files will appear in the  **Solution Explorer**, in the  _BusinessObjects\MySolutionDataModelCode_  folder.
     
-    ![XpoDesigner_LegacyDB_SolutionExplorer](https://docs.devexpress.com/eXpressAppFramework/images/xpodesigner_legacydb_solutionexplorer117144.png)
+    ![image](https://github.com/jjcolumb/Generate-XPO-Business-Classes-for-Existing-Data-Tables/assets/126447472/f8a64016-55fa-435f-828f-f2b83e647b2f)
+
     
     >NOTE
     If you do not like to deal with the designer and prefer to do everything in code, create a separate code file and copy the generated classes into it. Then, remove files that are added by the designer.
@@ -89,7 +94,8 @@ You cannot apply attributes to properties in the partial class’ code. Instead,
 
 Alternatively, you can use the designer to apply attributes. Focus the requires class or field and specify the  **Custom Attributes**  setting in the  **Properties**  window.
 
-![CustomAttributes](https://docs.devexpress.com/eXpressAppFramework/images/customattributes132225.png)
+![image](https://github.com/jjcolumb/Generate-XPO-Business-Classes-for-Existing-Data-Tables/assets/126447472/18d1c572-3f81-43ae-ac2e-66fd27195e4e)
+
 
 ## Specify the Connection String
 
@@ -102,4 +108,5 @@ Now you can run the WinForms and ASP.NET Web Forms applications to see the resul
 -   [WinForms](https://docs.devexpress.com/eXpressAppFramework/113451/business-model-design-orm/business-model-design-with-xpo/generate-xpo-business-classes-for-existing-data-tables#tabpanel_+wrfC4bG6p-2_tabid-01)
 -   [ASP.NET Web Forms](https://docs.devexpress.com/eXpressAppFramework/113451/business-model-design-orm/business-model-design-with-xpo/generate-xpo-business-classes-for-existing-data-tables#tabpanel_+wrfC4bG6p-2_tabid-02)
 
-![WinForms](https://docs.devexpress.com/eXpressAppFramework/images/xpodesigner_legacydb_runtimewin117145.png)
+![image](https://github.com/jjcolumb/Generate-XPO-Business-Classes-for-Existing-Data-Tables/assets/126447472/3f4348f8-cf90-45da-8b40-2f29884acb33)
+
