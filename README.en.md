@@ -1,5 +1,5 @@
-[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/jjcolumb/Generate-XPO-Business-Classes-for-Existing-Data-Tables#readme)
-[![es](https://img.shields.io/badge/lang-es-yellow.svg)](https://github.com/jjcolumb/Generate-XPO-Business-Classes-for-Existing-Data-Tables/blob/master/README.es.md)
+
+[![es](https://img.shields.io/badge/lang-es-yellow.svg)](https://github.com/jjcolumb/Generate-XPO-Business-Classes-for-Existing-Data-Tables/blob/master/README.md)
 
 # XAF-XPO-DataModel
 
